@@ -1,6 +1,6 @@
-serial: test.c
-	clang test.c -o serial -framework CoreFoundation -framework IOKit
-test: serial
-	./serial
+mdv-test: app.c mdv.c
+	clang app.c mdv.c -o mdv-test -framework CoreFoundation -framework IOKit
+test: mdv-test
+	./mdv-test
 clean:
-	rm -fr serial
+	rm -fr mdv-test
